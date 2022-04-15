@@ -86,35 +86,107 @@ each.
 игрушки, произведенные до 2010 года. - любым способом, можно без stream.
  */
 
-        HashMap<String, Product> myMap = new HashMap();
-        Product p1 = new Product("самолет", 2012);
-        Product p2 = new Product("паровоз", 2000);
-        Product p3 = new Product("самосвал", 2004);
-        Product p4 = new Product("кукла", 2018);
-        Product p5 = new Product("пистолет", 2020);
-        Product p6 = new Product("ракета", 2021);
-        Product p7 = new Product("мяч", 2003);
+//        HashMap<String, Product> myMap = new HashMap();
+//        Product p1 = new Product("самолет", 2012);
+//        Product p2 = new Product("паровоз", 2000);
+//        Product p3 = new Product("самосвал", 2004);
+//        Product p4 = new Product("кукла", 2018);
+//        Product p5 = new Product("пистолет", 2020);
+//        Product p6 = new Product("ракета", 2021);
+//        Product p7 = new Product("мяч", 2003);
+//
+//        myMap.put("Летчик ", p1);
+//        myMap.put("Чух-чух ", p2);
+//        myMap.put("Ррррр ", p3);
+//        myMap.put("Маша ", p4);
+//        myMap.put("Макаров ", p5);
+//        myMap.put("Гагарин ", p6);
+//        myMap.put("Круглик ", p7);
+//        System.out.print(myMap);
+//        System.out.println("\nСобранная коллекция через цикл в печать");
+//        myMap.entrySet()
+//                .stream().filter(x -> x.getValue().getYear() > 2010)
+//                .forEach(x -> System.out.print(x + "; "));
+//        Map<String, Product> map2 =
+//                myMap.entrySet()
+//                        .stream().filter(x -> x.getValue().getYear() > 2010)
+//                        .collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
+//
+//        System.out.println("\nСборная коллекция");
+//        System.out.println(map2);
 
-        myMap.put("Летчик ", p1);
-        myMap.put("Чух-чух ", p2);
-        myMap.put("Ррррр ", p3);
-        myMap.put("Маша ", p4);
-        myMap.put("Макаров ", p5);
-        myMap.put("Гагарин ", p6);
-        myMap.put("Круглик ", p7);
-        System.out.print(myMap);
-        System.out.println("\nСобранная коллекция через цикл в печать");
-                 myMap.entrySet()
-                .stream().filter(x->x.getValue().getYear()>2010)
-                .forEach(x-> System.out.print(x+"; "));
-        Map<String, Product> map2=
-                myMap.entrySet()
-                        .stream().filter(x->x.getValue().getYear()>2010)
-                        .collect(Collectors.toMap(k->k.getKey(),v->v.getValue()));
+ /*
+ 4 (выполнять не обязательно) Добавить студентов в коллекцию. Создать класс Student,
+содержащий следующие характеристики – имя, группа, курс, оценки по предметам.
+Создать коллекцию, содержащую объекты класса Student.
+Создать коллекцию с фио студентов, если средний балл>=3
+А также печатает на консоль имена тех студентов из списка, которые обучаются на данном курсе
+  */
 
-        System.out.println("\nСборная коллекция");
-              System.out.println(map2);
+        Map<String, Integer> marksS1 = new TreeMap<String, Integer>();
+        marksS1.put("Математика", 10);
+        marksS1.put("Дипломатия", 10);
+        marksS1.put("Культура", 10);
+        marksS1.put("IT", 10);
+        marksS1.put("История", 10);
+        marksS1.put("Маркетинг", 5);
 
+        Map<String, Integer> marksS2 = new TreeMap<String, Integer>();
+        marksS2.put("Математика", 1);
+        marksS2.put("Дипломатия", 2);
+        marksS2.put("Культура", 3);
+        marksS2.put("IT", 2);
+        marksS2.put("История", 1);
+        marksS2.put("Маркетинг", 1);
+
+        Map<String, Integer> marksS3 = new TreeMap<String, Integer>();
+        marksS3.put("Математика", 2);
+        marksS3.put("Дипломатия", 1);
+        marksS3.put("Культура", 2);
+        marksS3.put("IT", 1);
+        marksS3.put("История", 2);
+        marksS3.put("Маркетинг", 1);
+
+        Map<String, Integer> marksS4 = new TreeMap<String, Integer>();
+        marksS4.put("Математика", 2);
+        marksS4.put("Дипломатия", 10);
+        marksS4.put("Культура", 10);
+        marksS4.put("IT", 2);
+        marksS4.put("История", 3);
+        marksS4.put("Маркетинг", 10);
+
+        Map<String, Integer> marksS5 = new TreeMap<String, Integer>();
+        marksS5.put("Математика", 9);
+        marksS5.put("Дипломатия", 9);
+        marksS5.put("Культура", 5);
+        marksS5.put("IT", 4);
+        marksS5.put("История", 5);
+        marksS5.put("Маркетинг", 5);
+
+        Student s1 = new Student("Фредди Меркьюри", marksS1, "Робототехника", 4);
+        Student s2 = new Student("Фредди Крюгер", marksS2, "Маркетинг", 2);
+        Student s3 = new Student("Билл Хофман", marksS3, "Логистика", 3);
+        Student s4 = new Student("Ангела Меркель", marksS4, "Туризм", 3);
+        Student s5 = new Student("Элтон Джон", marksS5, "Финансы и бизнес", 1);
+
+        List<Student> listStudent = new ArrayList<Student>();
+        listStudent.add(s1);
+        listStudent.add(s2);
+        listStudent.add(s3);
+        listStudent.add(s4);
+        listStudent.add(s5);
+        List<String> sortStudent = new ArrayList<String>();
+        System.out.println("\nИсходная коллекция студентов:\n");
+        for (Student s : listStudent) {
+            System.out.println(s);
+            if (s.getAvg() >= 3) {
+                sortStudent.add(s.getName());
+            }
+        }
+        System.out.println("\nСтуденты со средним баллом более 3: \n");
+            System.out.println(sortStudent);
+        }
     }
 
-}
+
+
