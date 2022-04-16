@@ -86,34 +86,34 @@ each.
 игрушки, произведенные до 2010 года. - любым способом, можно без stream.
  */
 
-//        HashMap<String, Product> myMap = new HashMap();
-//        Product p1 = new Product("самолет", 2012);
-//        Product p2 = new Product("паровоз", 2000);
-//        Product p3 = new Product("самосвал", 2004);
-//        Product p4 = new Product("кукла", 2018);
-//        Product p5 = new Product("пистолет", 2020);
-//        Product p6 = new Product("ракета", 2021);
-//        Product p7 = new Product("мяч", 2003);
-//
-//        myMap.put("Летчик ", p1);
-//        myMap.put("Чух-чух ", p2);
-//        myMap.put("Ррррр ", p3);
-//        myMap.put("Маша ", p4);
-//        myMap.put("Макаров ", p5);
-//        myMap.put("Гагарин ", p6);
-//        myMap.put("Круглик ", p7);
-//        System.out.print(myMap);
-//        System.out.println("\nСобранная коллекция через цикл в печать");
-//        myMap.entrySet()
-//                .stream().filter(x -> x.getValue().getYear() > 2010)
-//                .forEach(x -> System.out.print(x + "; "));
-//        Map<String, Product> map2 =
-//                myMap.entrySet()
-//                        .stream().filter(x -> x.getValue().getYear() > 2010)
-//                        .collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
-//
-//        System.out.println("\nСборная коллекция");
-//        System.out.println(map2);
+        HashMap<String, Product> myMap = new HashMap();
+        Product p1 = new Product("самолет", 2012);
+        Product p2 = new Product("паровоз", 2000);
+        Product p3 = new Product("самосвал", 2004);
+        Product p4 = new Product("кукла", 2018);
+        Product p5 = new Product("пистолет", 2020);
+        Product p6 = new Product("ракета", 2021);
+        Product p7 = new Product("мяч", 2003);
+
+        myMap.put("Летчик ", p1);
+        myMap.put("Чух-чух ", p2);
+        myMap.put("Ррррр ", p3);
+        myMap.put("Маша ", p4);
+        myMap.put("Макаров ", p5);
+        myMap.put("Гагарин ", p6);
+        myMap.put("Круглик ", p7);
+        System.out.print(myMap);
+        System.out.println("\nСобранная коллекция через цикл в печать");
+        myMap.entrySet()
+                .stream().filter(x -> x.getValue().getYear() > 2010)
+                .forEach(x -> System.out.print(x + "; "));
+        Map<String, Product> map2 =
+                myMap.entrySet()
+                        .stream().filter(x -> x.getValue().getYear() > 2010)
+                        .collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
+
+        System.out.println("\nСборная коллекция");
+        System.out.println(map2);
 
  /*
  4 (выполнять не обязательно) Добавить студентов в коллекцию. Создать класс Student,
@@ -184,9 +184,31 @@ each.
             }
         }
         System.out.println("\nСтуденты со средним баллом более 3: \n");
-            System.out.println(sortStudent);
+        System.out.println(sortStudent);
+        /*ПО Желанию
+        0 Дан список целых чисел. Между двумя элементами одной чётности вставить число 0.
+         */
+
+        ArrayList<Integer> listNum = new ArrayList<Integer>(14);
+        while (listNum.size() < 9) {
+            listNum.add((int) (Math.random() * 50));
         }
+        System.out.println(listNum);
+        for (int i = 0; i < listNum.size() - 1; i++) {
+            if (listNum.get(i) % 2 == 0 && listNum.get(i + 1) % 2 == 0 || listNum.get(i) % 2 != 0 && listNum.get(i + 1) % 2 != 0) {
+                listNum.add(i + 1, 0);
+                i++;
+            }
+        }
+        System.out.println(listNum);
+
     }
+
+
+}
+
+
+
 
 
 
