@@ -329,14 +329,19 @@ each.
         System.out.print(list);
         Collections.sort(list);
         System.out.println("\n" + list);
+        HashMap<String, Integer> mapWords = new HashMap<>();
         int count = 0;
         for (int i = 0; i <= list.size() - 1; i++) {
             String find = list.get(i);
             count = (list.lastIndexOf(find) + 1) - i;
+            mapWords.put(find, count);
             System.out.println("Слово \"" + find + "\" " + count + " раз");
             i = list.lastIndexOf(find);
             count = 0;
         }
+        System.out.println(mapWords.get("аптека"));
+
+
     }
 }
 
