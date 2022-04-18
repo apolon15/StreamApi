@@ -341,9 +341,21 @@ each.
         }
         System.out.println(mapWords.get("аптека"));
 
+/*
+6 Напишите Java-программу для итерации объекта типа HashMap с использованием цикла while и улучшенного цикла for.
 
+ */
+
+
+        Iterator<Map.Entry<String, Integer>> it = mapWords.entrySet().iterator();
+        while (it.hasNext()) {
+         String text=it.next().getKey();
+            System.out.println("Длинна слова \"" + text + "\" равна " +
+                    text.length());
+        }
     }
 }
+
 
 
 
