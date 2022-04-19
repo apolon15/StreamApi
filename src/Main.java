@@ -120,71 +120,71 @@ each.
 содержащий следующие характеристики – имя, группа, курс, оценки по предметам.
 Создать коллекцию, содержащую объекты класса Student.
 Создать коллекцию с фио студентов, если средний балл>=3
-А также печатает на консоль имена тех студентов из списка, которые обучаются на данном курсе
+
   */
 
-//        Map<String, Integer> marksS1 = new TreeMap<String, Integer>();
-//        marksS1.put("Математика", 10);
-//        marksS1.put("Дипломатия", 10);
-//        marksS1.put("Культура", 10);
-//        marksS1.put("IT", 10);
-//        marksS1.put("История", 10);
-//        marksS1.put("Маркетинг", 5);
-//
-//        Map<String, Integer> marksS2 = new TreeMap<String, Integer>();
-//        marksS2.put("Математика", 1);
-//        marksS2.put("Дипломатия", 2);
-//        marksS2.put("Культура", 3);
-//        marksS2.put("IT", 2);
-//        marksS2.put("История", 1);
-//        marksS2.put("Маркетинг", 1);
-//
-//        Map<String, Integer> marksS3 = new TreeMap<String, Integer>();
-//        marksS3.put("Математика", 2);
-//        marksS3.put("Дипломатия", 1);
-//        marksS3.put("Культура", 2);
-//        marksS3.put("IT", 1);
-//        marksS3.put("История", 2);
-//        marksS3.put("Маркетинг", 1);
-//
-//        Map<String, Integer> marksS4 = new TreeMap<String, Integer>();
-//        marksS4.put("Математика", 2);
-//        marksS4.put("Дипломатия", 10);
-//        marksS4.put("Культура", 10);
-//        marksS4.put("IT", 2);
-//        marksS4.put("История", 3);
-//        marksS4.put("Маркетинг", 10);
-//
-//        Map<String, Integer> marksS5 = new TreeMap<String, Integer>();
-//        marksS5.put("Математика", 9);
-//        marksS5.put("Дипломатия", 9);
-//        marksS5.put("Культура", 5);
-//        marksS5.put("IT", 4);
-//        marksS5.put("История", 5);
-//        marksS5.put("Маркетинг", 5);
-//
-//        Student s1 = new Student("Фредди Меркьюри", marksS1, "Робототехника", 4);
-//        Student s2 = new Student("Фредди Крюгер", marksS2, "Маркетинг", 2);
-//        Student s3 = new Student("Билл Хофман", marksS3, "Логистика", 3);
-//        Student s4 = new Student("Ангела Меркель", marksS4, "Туризм", 3);
-//        Student s5 = new Student("Элтон Джон", marksS5, "Финансы и бизнес", 1);
-//
-//        List<Student> listStudent = new ArrayList<Student>();
-//        listStudent.add(s1);
-//        listStudent.add(s2);
-//        listStudent.add(s3);
-//        listStudent.add(s4);
-//        listStudent.add(s5);
-//        List<String> sortStudent = new ArrayList<String>();
-//        System.out.println("\nИсходная коллекция студентов:\n");
-//        for (Student s : listStudent) {
-//            System.out.println(s);
-//            if (s.getAvg() >= 3) {
-//                sortStudent.add(s.getName());
-//            }
-//        }
-//        System.out.println("\nСтуденты со средним баллом более 3: \n");
-//        System.out.println(sortStudent);
+        Map<String, Integer> marksS1 = new TreeMap<String, Integer>();
+        marksS1.put("Математика", 10);
+        marksS1.put("Дипломатия", 10);
+        marksS1.put("Культура", 10);
+        marksS1.put("IT", 10);
+        marksS1.put("История", 10);
+        marksS1.put("Маркетинг", 5);
+
+        Map<String, Integer> marksS2 = new TreeMap<String, Integer>();
+        marksS2.put("Математика", 1);
+        marksS2.put("Дипломатия", 2);
+        marksS2.put("Культура", 3);
+        marksS2.put("IT", 2);
+        marksS2.put("История", 1);
+        marksS2.put("Маркетинг", 1);
+
+        Map<String, Integer> marksS3 = new TreeMap<String, Integer>();
+        marksS3.put("Математика", 2);
+        marksS3.put("Дипломатия", 1);
+        marksS3.put("Культура", 2);
+        marksS3.put("IT", 1);
+        marksS3.put("История", 2);
+        marksS3.put("Маркетинг", 1);
+
+        Map<String, Integer> marksS4 = new TreeMap<String, Integer>();
+        marksS4.put("Математика", 2);
+        marksS4.put("Дипломатия", 10);
+        marksS4.put("Культура", 10);
+        marksS4.put("IT", 2);
+        marksS4.put("История", 3);
+        marksS4.put("Маркетинг", 10);
+
+        Map<String, Integer> marksS5 = new TreeMap<String, Integer>();
+        marksS5.put("Математика", 9);
+        marksS5.put("Дипломатия", 9);
+        marksS5.put("Культура", 5);
+        marksS5.put("IT", 4);
+        marksS5.put("История", 5);
+        marksS5.put("Маркетинг", 5);
+
+        Student s1 = new Student("Фредди Меркьюри", marksS1, "Робототехника", 4);
+        Student s2 = new Student("Фредди Крюгер", marksS2, "Маркетинг", 2);
+        Student s3 = new Student("Билл Хофман", marksS3, "Логистика", 3);
+        Student s4 = new Student("Ангела Меркель", marksS4, "Туризм", 3);
+        Student s5 = new Student("Элтон Джон", marksS5, "Финансы и бизнес", 1);
+
+        List<Student> listStudent = new ArrayList<Student>();
+        listStudent.add(s1);
+        listStudent.add(s2);
+        listStudent.add(s3);
+        listStudent.add(s4);
+        listStudent.add(s5);
+        List<String> sortStudent = new ArrayList<String>();
+        System.out.println("\nИсходная коллекция студентов:\n");
+        System.out.println(sortStudent);
+        System.out.println("************");
+        System.out.println("\nСтуденты со средним баллом более 3: \n");
+        Map<Object,Object> list1=listStudent.stream().
+                filter(x->x.getAvg()>3)
+                .collect(Collectors.toMap(k->k.getName(),v->v.getCours()));
+        System.out.println(list1.keySet());
+
         /*ПО Желанию
         0 Дан список целых чисел. Между двумя элементами одной чётности вставить число 0.
          */
@@ -276,7 +276,7 @@ each.
 //        int count=0;
 //        Collections.sort(mStr);
 //        System.out.println(mStr);
-//        for(int i=0;i<=mStr.size()-1;i++){
+//        for(int i=0;i<=mStr.size()-1;i++){//d цикле нахожу кол-во посторений.Если найдено более чем MAX-перезаписываю
 //            String tmp=mStr.get(i);
 //            count=(mStr.lastIndexOf(tmp)+1)-i;
 //            if(count>max){
@@ -313,25 +313,25 @@ each.
   5 Напишите программу на Java для подсчета количества конкретных слов в строке, используя HashMap.
   */
         String string = ("Ночь, улица, фонарь, аптека, бессмысленный и тусклый свет. Живи ещё хоть четверть века — всё будет так. Исхода нет. Умрёшь — начнёшь опять сначала и повторится всё, как встарь: ночь, ледяная рябь канала, аптека, улица, фонарь. ");
-        String lowC = string.toLowerCase();
-        String[] words = lowC.split("\\s|\\. |, |: |- |-");
-        for (int i = 0; i < words.length; i++) {
+        String lowC = string.toLowerCase();//преобразовал в ниж.рег
+        String[] words = lowC.split("\\s|\\. |, |: |- |-");//поместил в массив
+        for (int i = 0; i < words.length; i++) {//проверил на всё что не слова
             if (!Character.isLetter(words[i].charAt(0))) {
-                words[i] = "";
+                words[i] = "";//заменил
             }
         }
         ArrayList<String> list = new ArrayList<>();
-        for (String s : words) {
+        for (String s : words) {//слова поместил в новый лист
             if (!s.equals("")) {
                 list.add(s);
             }
         }
-        System.out.print(list);
-        Collections.sort(list);
-        System.out.println("\n" + list);
+        System.out.print(list);//печать
+        Collections.sort(list);//сортировка
+        System.out.println("\n" + list);//печать
         HashMap<String, Integer> mapWords = new HashMap<>();
         int count = 0;
-        for (int i = 0; i <= list.size() - 1; i++) {
+        for (int i = 0; i <= list.size() - 1; i++) {//в цикле нахожу по отсортированныйм словам кол-во повторений и кладу в Map<Слово,кол-во посторений>
             String find = list.get(i);
             count = (list.lastIndexOf(find) + 1) - i;
             mapWords.put(find, count);
